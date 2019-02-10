@@ -24,11 +24,11 @@ body
 {
   height: 100vh;
   width: 100vw;
-}
-
-.container
-{
   background-color: pink;
+  text-align: center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 p
