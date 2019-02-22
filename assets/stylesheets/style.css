@@ -2,17 +2,22 @@
     --mrg: 3vw; 
   }
 
-body
-{
+* {
     padding: 0;
     margin: 0;
 }
 
-#sketch-holder
-{
-    position: relative;
+body {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+#sketch-canvas {
+    position: absolute;
     left: var(--mrg);
     top: var(--mrg);
-    width: calc(100vw - 2 * var(--mrg));
-    height: calc(100vh - 2 * var(--mrg));
+    width: calc(100% - 2 * var(--mrg));
+    height: calc(100% - 2 * var(--mrg));
+    background-color: pink;
 }

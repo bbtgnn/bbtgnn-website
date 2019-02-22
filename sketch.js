@@ -6,14 +6,14 @@ let xoff2 = 0.5;
 
 
 function getDivSize() {
-  var clientHeight = document.getElementById('sketch-holder').clientHeight;
-  var clientWidth = document.getElementById('sketch-holder').clientWidth;
+  var clientHeight = document.getElementById('sketch-canvas').clientHeight;
+  var clientWidth = document.getElementById('sketch-canvas').clientWidth;
   return [clientWidth, clientHeight];
 }
 
 function setup() {
   canvas = createCanvas(getDivSize()[0], getDivSize()[1]);
-  canvas.parent('sketch-holder');
+  canvas.parent('sketch-canvas');
 }
 
 function draw() {
