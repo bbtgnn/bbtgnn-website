@@ -1,5 +1,18 @@
+:root {
+    --mrg: 3vw; 
+  }
+
 body
 {
     padding: 0;
     margin: 0;
+}
+
+#sketch-holder
+{
+    position: relative;
+    left: var(--mrg);
+    top: var(--mrg);
+    width: calc(100vw - 2 * var(--mrg));
+    height: calc(100vh - 2 * var(--mrg));
 }
