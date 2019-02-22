@@ -13,10 +13,25 @@ body {
     height: 100%;
 }
 
-#sketch-canvas {
+#container {
     position: absolute;
     left: var(--mrg);
     top: var(--mrg);
     width: calc(100% - 2 * var(--mrg));
     height: calc(100% - 2 * var(--mrg));
+    display: flex;
+	flex-direction: column;
+}
+
+#sketch-canvas {
+    flex: 1;
+}
+
+#sketch-title {
+    color: white;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 400i;
+    font-size: 5vh;
+    text-align: right;
+    padding-top: calc(var(--mrg) - 10px);
 }
