@@ -6,22 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Page title and icon -->
     <title>bbtgnn</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- Importing stylesheets -->
-    <link rel="stylesheet" type="text/css" href="assets/stylesheets/style.css">
-    <!-- Importing p5 (sempre prima p5, poi gli addons!) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js" integrity="sha256-gAw6iX1ivbkYgIvRfOXfTEm/w2DZLEB3W6RjSIEydio=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js" integrity="sha256-iVr57I/ndUOFpOYMGk5ZVNgjRRgJfTrzR65I2C+oGFM=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js" integrity="sha256-eZiLVQnMBAgag2l1hE2Y3FEnp1ab2qGUhf0wOGqMLf4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <!-- Importing p5 script -->
-    <script src="sketch.js"></script>
+    <script src="./p5.min.js"></script>
+    <script src="./sketch.js"></script>
   </head>
 
   <body>
-    <div id="container">
-      <div id="sketch-canvas"></div>
-      <div id="sketch-title">rincorrersi</div>
+    <div class="text">
+      <p class="">
+        Hi! I'm Giovanni Abbatepaolo :)
+      </p>
+      <p class="">
+        When I grow up I want to be an information architect: I *deeply* like organizing information (but also other stuff, like shelves and drawers).
+      </p>
+      <p class="size-1 indent-1">
+        Currently looking for an MA in the field.
+      </p>
+      <p class="size-1 indent-1">
+        At the moment I'm helping the coop <a href="https://www.lascuolaopensource.xyz/">La Scuola Open Source</a> in organizing all their data. Also, we're trying to map all the processes and procedures, in order to make them more accessible for members.
+      </p>
+      <p class="">
+        I see a strong bond between information architecture and learning. I think that properly organized information (both semantically and visually) can really help people understand even hard concepts.
+      </p>
+      <p class="size-1 indent-1">
+        My BA thesis (you can read it <a href="https://drive.google.com/file/d/1DDUZrfQqQEuiP5ZnzBt_vc4YWnQr1iBN/view?usp=sharing" target="_blank">here</a> – italian only, sry) deals exactly with topic. I designed an application that can help people easily rearrange and structure visually the content of books (I'll develop it soon).
+      </p>
+      <p class="size-1 indent-2">
+        BA: Graphic Design and Visual Communication @ <a href="https://isiaurbino.net/">ISIA Urbino</a>
+      </p>
+      <p class="">
+        Because of this bond between information architecture and learning, I also like teaching. I have a background in graphic design, book design, typography. And I like to code – so I teach generative graphics, generative books, generative typography.
+      </p>
+      <p class="size-1 indent-1 no-margin">
+        Some workshops:
+      </p>
+      <ul class="size-1 indent-2">
+        <li><a href="https://www.lascuolaopensource.xyz/didattica/tipi-pigri-e-discreti">Generative typography – 1</a></li>
+        <li><a href="https://www.lascuolaopensource.xyz/xyz2019">Generative typography – 2</a></li>
+        <li><a href="https://www.lascuolaopensource.xyz/xyz-hbfs">Generative typography – 3</a></li>
+        <li><a href="https://www.lascuolaopensource.xyz/xyz2020">Generative typography – 4</a></li>
+        <li><a href="https://www.lascuolaopensource.xyz/didattica/basic-generative-design-2020">Generative graphics – 1</a></li>
+        <li><a href="https://www.lascuolaopensource.xyz/en/teachings/basic-generative-design-online">Generative graphics – 2</a></li>
+      </ul>
+      <p class="margin-before">
+        Last but not least: I like to code tools for designers – mostly web apps but also simple python scripts.
+      </p>
+      <p class="size-1 indent-1">
+        But I'm a bit lazy, so I do desktop-only. After all, why need a production tool on the phone? ;)
+      </p>
+      <p class="size-1 indent-1">
+        All code is open source (and moderately documented). Here's my <a href="https://github.com/bbtgnn?tab=repositories">GitHub</a>.
+      </p>
+      <p class="size-1 indent-1 no-margin">
+        Some tools:
+      </p>
+      <ul class="size-1 indent-2">
+        <li><a href="https://bbtgnn.github.io/hofmann-1.0.0-site/">Hofmann 1.0.0</a></li>
+        <li><a href="https://github.com/bbtgnn/GTL">Generatore Tipografico di Libertà</a></li>
+        <li><a href="https://bbtgnn.github.io/moiremaker/">MoireMaker</a></li>
+        <li><a href="https://github.com/bbtgnn/GTL">PDF Print Aligner</a></li>
+      </ul>
+      <p class="margin-before">
+        If you'd like to get in touch, <a href="mailto:bbtgnn@gmail.com">feel free to email me</a>!
+      </p>
     </div>
+    <div id="sketch-canvas"></div>
   </body>
 
 </html>

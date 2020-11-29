@@ -1,5 +1,5 @@
 // --- VARIABLES --- //
-var mrg = 30;
+var mrg = 0;
 
 var noise_1 = 0.0;
 var noise_2 = 0.5;
@@ -9,8 +9,11 @@ var noise_2 = 0.5;
 // --- P5 --- //
 function setup() {
   // Getting div size for canvas size
-  var [canvas_w, canvas_h] = getDivSize('sketch-canvas');
-  var canvas = createCanvas(canvas_w, canvas_h);
+  var canvas = createCanvas(windowWidth, Math.max(
+    document.body.scrollHeight, document.documentElement.scrollHeight,
+    document.body.offsetHeight, document.documentElement.offsetHeight,
+    document.body.clientHeight, document.documentElement.clientHeight
+  ));
   // Setting canvas div
   canvas.parent('sketch-canvas');
   // Setting rect styles
@@ -19,10 +22,10 @@ function setup() {
 }
 
 function draw() {
-  background(250);
+  background(245);
   // Updating perlin noise
-  noise_1 = noise_1 + 0.01;
-  noise_2 = noise_2 - 0.007;
+  noise_1 = noise_1 + 0.001;
+  noise_2 = noise_2 - 0.0007;
   let x1 = noise(noise_1) * width;
   fill(255, 0, 0, 100);
   rect(x1/2, mrg, x1, height-2*mrg);
@@ -31,15 +34,10 @@ function draw() {
   rect(x2/2, mrg, x2, height-2*mrg);
 }
 
-
-
-// --- PLAIN JAVASCRIPT --- //
-function getDivSize(div_name) {
-  var div_w = document.getElementById(div_name).clientWidth;
-  var div_h = document.getElementById(div_name).clientHeight;
-  return [div_w, div_h];
-}
-
 function windowResized() {
-  resizeCanvas(getDivSize('sketch-canvas')[0], getDivSize('sketch-canvas')[1]);
+  resizeCanvas(windowWidth, Math.max(
+    document.body.scrollHeight, document.documentElement.scrollHeight,
+    document.body.offsetHeight, document.documentElement.offsetHeight,
+    document.body.clientHeight, document.documentElement.clientHeight
+  ));
 }

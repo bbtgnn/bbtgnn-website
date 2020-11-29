@@ -1,0 +1,57 @@
+:root {
+  --indent: 2em;
+  --space: 1em;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.sketch-canvas {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.text {
+  position: absolute;
+  z-index: 1;
+  padding: 2em;
+  max-width: 500px;
+}
+
+p {
+  font-size: 1.1em;
+  margin-bottom: var(--space);
+}
+
+.no-margin {
+  margin-bottom: 0;
+}
+
+.margin-before {
+  margin-top: var(--space);
+}
+
+.size-1 {
+  font-size: 0.9em;
+}
+
+.indent-1 {
+  padding-left: calc(var(--indent));
+}
+
+.indent-2 {
+  padding-left: calc(var(--indent) * 2);
+}
+
+a {
+  color: blue;
+}
+
+a:visited {
+  color: blue;
+}
