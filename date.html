@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: gainsboro;
+      }
+
+      #number {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 99;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 2em;
+      }
+    </style>
+
+    <div>
+      <div id="number"></div>
+    </div>
+
+    <script>
+      const dayOfYear = (date) =>
+        Math.floor(
+          (date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24
+        );
+
+      const num = dayOfYear(new Date());
+      document.getElementById("number").innerHTML = num;
+
+      for (let i = 0; i < num; i++) {
+        let box = document.createElement("div");
+        box.style.position = "fixed";
+        box.style.width = "5vw";
+        box.style.height = "5vw";
+        box.style.backgroundColor = "greenyellow";
+        box.style.top = Math.random() * 95 + "vh";
+        box.style.left = Math.random() * 95 + "vw";
+        document.body.prepend(box);
+      }
+    </script>
+  </body>
+</html>
